@@ -9,6 +9,7 @@ from app import app
 from _map import * 
 from _histogram import *
 from _controllers import *
+import os
     
 #=====================================
 #Ingestão de dados
@@ -120,5 +121,5 @@ def update_hist (location, square_size, color_map):
      
 
 if __name__ == '__main__':
-    app.run_server(debug=True)
+    app.run_server(debug=True, port = 8050 | os.environ['PORT'])
     
